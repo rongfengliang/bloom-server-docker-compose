@@ -23,20 +23,20 @@ services:
     ports:
     - "8091:80"
   bloom:
-    image: valeriansaliou/bloom:v1.25.0
+    image: dalongrong/bloom-server:1.25
     environment:
     - "RUST_BACKTRACE=1"
     volumes:
-    - "./bloom/config.cfg:/etc/bloom.cfg"
+    - "./bloom/config.cfg:/app/bloom/config.cfg"
     ports:
     - "8080:8080"
     - "8811:8811"
   bloom2:
-    image: valeriansaliou/bloom:v1.25.0
+    image: dalongrong/bloom-server:1.25
     environment:
     - "RUST_BACKTRACE=1"
     volumes:
-    - "./bloom/config2.cfg:/etc/bloom.cfg"
+    - "./bloom/config2.cfg:/app/bloom/config.cfg"
     ports:
     - "8081:8080"
     - "8812:8811"
