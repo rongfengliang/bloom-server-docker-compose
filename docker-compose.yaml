@@ -10,6 +10,7 @@ services:
     - "./nginx/nginx-lb.conf:/usr/local/openresty/nginx/conf/nginx.conf"
     ports:
     - "9000:80"
+    - "9001:81"
   webapi:
     image: openresty/openresty:alpine-fat
     volumes:
@@ -40,4 +41,3 @@ services:
     ports:
     - "8081:8080"
     - "8812:8811"
-
